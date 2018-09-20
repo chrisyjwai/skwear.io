@@ -1,0 +1,36 @@
+body {
+	font-family: Georgia, serif;
+	font-style: normal;
+}
+
+p {
+	font-size: 10vmin;
+	font-weight: lighter;
+}
+
+#page {
+	position: fixed;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+#title {
+	font-style: italic;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.letter {
+	float: left;
+	padding: 1vmin;
+}
+
+#options {
+	display: none;
+}

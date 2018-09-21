@@ -1,27 +1,33 @@
+:root {
+	--blur-size: 0.5vw;
+}
+
 body {
 	font-family: Georgia, serif;
 	font-style: normal;
 }
 
-p {
-	font-size: 10vw;
+a {
+	font-size: 14vw;
 	font-weight: lighter;
+	color: #000000;
+	text-decoration: none;
 }
 
 #page {
 	position: fixed;
-	position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	overflow: hidden;	
+	overflow: hidden;
 }
 
 #title {
+	display: flex;
 	font-style: italic;
 	margin: 0;
-	position: absolute;
+	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -29,7 +35,20 @@ p {
 
 .letter {
 	float: left;
-	padding: 1vw;
+	padding: 2vw;
+	transition: filter 0.5s;
+}
+
+#title:hover > div {
+	filter: blur(var(--blur-size));
+}
+
+#title:hover > div:hover ~ div {
+	filter: blur(var(--blur-size));
+}
+
+#title:hover > div:hover {
+	filter: none;
 }
 
 #options {
